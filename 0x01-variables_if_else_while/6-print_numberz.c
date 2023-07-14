@@ -1,17 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main(void) {
-  char ch = '0';
-  int i = 1;
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-  while (i <= 9) {
-    putchar(ch);
-    ch++;
-    i++;
-  }
+int main(void)
+{
+	int d;
 
-  putchar('\n');
+	for (d = '0'; d <= '9'; d++)
+		putchar(d);
+	putchar('\n');
 
-  return 0;
+	return (0);
 }
-
