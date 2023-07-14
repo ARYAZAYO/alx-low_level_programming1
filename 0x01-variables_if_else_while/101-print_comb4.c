@@ -1,31 +1,39 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main(void) {
-  int i = 0, j = 1, k = 2;
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-  while (i <= 9) {
-    while (j <= 9) {
-      while (k <= 9) {
-        if (i != j && i != k && j != k) {
-          putchar(i + '0');
-          putchar(j + '0');
-          putchar(k + '0');
-          if (i != 8 || j != 7 || k != 6) {
-            putchar(',');
-            putchar(' ');
-          }
-        }
-        k++;
-      }
-      k = 2;
-      j++;
-    }
-    j = 1;
-    i++;
-  }
+int main(void)
+{
+	int d, p, q;
 
-  putchar('\n');
+	for (d = '0'; d < '9'; d++)
+	{
+		for (p = d + 1; p <= '9'; p++)
+		{
+			for (q = p + 1; q <= '9'; q++)
+			{
+				if ((p != d) != q)
+				{
+					putchar(d);
+					putchar(p);
+					putchar(q);
 
-  return 0;
+					if (d == '7' && p == '8')
+						continue;
+
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+
+	return (0);
 }
-
