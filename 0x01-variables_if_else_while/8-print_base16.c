@@ -1,21 +1,20 @@
-/*
- * File: 8-print_base16.c
- * Auth: Aryazayo
- */
 #include <stdio.h>
 /**
- * main - Prints all the numbers of base 16 in lowercase.
+ * main - Prints numbers between 0 to 9 and letters between a to f.
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int num;
-	char letter;
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
-	for (letter = 'a'; letter <= 'f'; letter++)
-		putchar(letter);
+	int i;
+	for (i = 48; i < 58; i++)
+	{
+		putchar(i);
+	}
+	for (i = 97; i < 103; i++)
+	{
+		putchar(i);
+	}
 	putchar('\n');
 	return (0);
 }
