@@ -1,17 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main(void) {
-  char ch = 'a';
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-  while (ch <= 'z') {
-    if (ch != 'q' && ch != 'e') {
-      putchar(ch);
-    }
-    ch++;
-  }
+int main(void)
+{
+	char low, e, q;
 
-  putchar('\n');
+	e = 'e';
+	q = 'q';
 
-  return 0;
+	for (low = 'a'; low <= 'z'; low++)
+	{
+		if (low != e && low != q)
+			putchar(low);
+	}
+	putchar('\n');
+
+	return (0);
 }
-
