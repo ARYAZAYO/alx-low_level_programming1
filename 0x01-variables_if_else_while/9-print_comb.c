@@ -1,25 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main(void) {
-  int i = 0;
-  int j = 1;
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-  while (i <= 9) {
-    while (j <= 9) {
-      putchar(i + '0');
-      putchar(j + '0');
-      if (i != 9 || j != 9) {
-        putchar(',');
-        putchar(' ');
-      }
-      j++;
-    }
-    j = 1;
-    i++;
-  }
+int main(void)
+{
+	int d;
 
-  putchar('\n');
+	for (d = '0'; d <= '9'; d++)
+	{
+		putchar(d);
+		if (d != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
 
-  return 0;
+	return (0);
 }
-

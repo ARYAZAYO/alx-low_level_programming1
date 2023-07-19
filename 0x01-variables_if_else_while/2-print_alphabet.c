@@ -1,15 +1,23 @@
+/*
+ * File: 2-print_alphabet.c
+ * Auth: kyth
+ */
+
 #include <stdio.h>
 
-int main(void) {
-  char ch = 'a';
+/**
+ * main - Prints the alphabet in lowercase.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	char letter;
 
-  while (ch <= 'z') {
-    putchar(ch);
-    ch++;
-  }
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
 
-  putchar('\n');
+	putchar('\n');
 
-  return 0;
+	return (0);
 }
-

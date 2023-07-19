@@ -1,15 +1,23 @@
+/*
+ * File: 7-print_tebahpla.c
+ * Auth: kyth
+ */
+
 #include <stdio.h>
 
-int main(void) {
-  char ch = 'z';
+/**
+ * main - Prints the lowercase alphabet in reverse.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	char letter;
 
-  while (ch >= 'a') {
-    putchar(ch);
-    ch--;
-  }
+	for (letter = 'z'; letter >= 'a'; letter--)
+		putchar(letter);
 
-  putchar('\n');
+	putchar('\n');
 
-  return 0;
+	return (0);
 }
-

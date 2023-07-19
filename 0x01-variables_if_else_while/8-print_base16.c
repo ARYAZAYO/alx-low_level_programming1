@@ -1,20 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main(void) {
-  char ch = '0';
-  int i = 1;
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-  while (i <= 15) {
-    putchar(ch);
-    ch++;
-    if (i == 10) {
-      ch = 'a';
-    }
-    i++;
-  }
+int main(void)
+{
+	int d;
+	char low;
 
-  putchar('\n');
+	for (d = '0'; d <= '9'; d++)
+		putchar(d);
+	for (low = 'a'; low <= 'f'; low++)
+		putchar(low);
+	putchar('\n');
 
-  return 0;
+	return (0);
 }
-
